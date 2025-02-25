@@ -5,10 +5,13 @@ edition = "2021"
 
 [dependencies]
 axum = "0.8.1"
+hyper = { version = "1.6.0", features = ["full"] }
 serde = { version = "1.0.218", features = ["derive"] }
 serde_json = "1.0.139"
 tokio = { version = "1.43.0", features = ["full"] }
 tracing-subscriber = "0.3.19"
-utoipa = { version = "5.3.1", features = ["axum_extras"] }
+utoipa = { version = "5.3.1", features = ["axum_extras", "openapi_extensions"] }
 utoipa-axum = "0.2.0"
 utoipa-swagger-ui = { version = "9.0.0", features = ["axum"] }
+validate = "0.6.1"
+validator = { version = "0.20.0", features = ["derive"] }
